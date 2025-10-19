@@ -1,0 +1,249 @@
+"use client";
+
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import { Check, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function PricingSection() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  const plans = [
+    {
+      name: "Ready-to-Wear",
+      description: "Premium Eastern fabrics with standard size alterations and heritage craftsmanship",
+      price: 299,
+      period: "per piece",
+      popular: false,
+      features: [
+        "Premium Eastern Fabrics",
+        "Standard Size Alterations",
+        "Heritage Craftsmanship",
+        "Quality Guarantee",
+      ],
+    },
+    {
+      name: "Semi-Bespoke",
+      description: "Everything in Ready-to-Wear with personal consultation, custom fabric selection, and precision measurements",
+      price: 799,
+      period: "per piece",
+      popular: true,
+      features: [
+        "Everything in Ready-to-Wear",
+        "Personal Style Consultation",
+        "Custom Fabric Selection",
+        "Precision Measurements",
+        "Two Fitting Sessions",
+        "Monogramming Included",
+        "Care Instructions Guide",
+        "6-Month Fit Guarantee",
+      ],
+    },
+    {
+      name: "Full Bespoke",
+      description: "Everything in Semi-Bespoke with master tailor assignment, unlimited fittings, and exclusive fabric access",
+      price: 1499,
+      period: "per piece",
+      popular: false,
+      features: [
+        "Everything in Semi-Bespoke",
+        "Master Tailor Assignment",
+        "Unlimited Fitting Sessions",
+        "Exclusive Fabric Access",
+        "Lifetime Fit Guarantee",
+      ],
+    },
+  ];
+
+  return (
+    <section className="relative w-full py-24 md:py-32 overflow-hidden bg-gradient-to-b from-ivory via-background to-[#F5F1E8]">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-gold/10 to-transparent rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-tl from-navy/8 to-transparent rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2],
+            x: [0, -40, 0],
+            y: [0, 40, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+
+      <div className="container relative z-10 mx-auto px-4" ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-20"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-gradient-to-r from-gold/20 to-navy/10 rounded-full border border-gold/30"
+          >
+            <Sparkles className="w-4 h-4 text-gold" />
+            <span className="text-sm font-medium text-navy">Premium Pricing</span>
+          </motion.div>
+          <h2 className="text-4xl md:text-6xl font-serif font-semibold text-navy mb-6">
+            Tailored to Your Needs
+          </h2>
+          <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto">
+            Choose the perfect plan for your wardrobe journey
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {plans.map((plan, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                duration: 0.8,
+                delay: 0.2 + index * 0.15,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className={`relative group ${
+                plan.popular ? "md:-mt-4 md:mb-4" : ""
+              }`}
+            >
+              {/* Animated background glow */}
+              <motion.div
+                className={`absolute -inset-1 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
+                  plan.popular
+                    ? "bg-gradient-to-br from-gold via-gold/50 to-navy/30"
+                    : "bg-gradient-to-br from-gold/20 via-navy/10 to-transparent"
+                }`}
+              />
+
+              <div
+                className={`relative h-full rounded-2xl backdrop-blur-sm transition-all duration-500 ${
+                  plan.popular
+                    ? "bg-gradient-to-br from-navy via-navy/95 to-navy/90 border-2 border-gold shadow-2xl shadow-gold/20"
+                    : "bg-white/80 border border-gold/20 hover:border-gold/40 hover:shadow-xl hover:shadow-gold/5"
+                }`}
+              >
+                {plan.popular && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ delay: 0.5 + index * 0.15 }}
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-gradient-to-r from-gold via-gold/90 to-gold rounded-full shadow-lg"
+                  >
+                    <span className="text-xs font-bold text-navy uppercase tracking-wide">
+                      Most Popular
+                    </span>
+                  </motion.div>
+                )}
+
+                <div className="p-8">
+                  <h3
+                    className={`text-2xl font-serif font-semibold mb-2 ${
+                      plan.popular ? "text-ivory" : "text-navy"
+                    }`}
+                  >
+                    {plan.name}
+                  </h3>
+                  <p
+                    className={`text-sm mb-6 ${
+                      plan.popular ? "text-ivory/70" : "text-navy/70"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
+
+                  <div className="mb-8">
+                    <div className="flex items-baseline gap-1">
+                      <span
+                        className={`text-5xl font-serif font-bold ${
+                          plan.popular ? "text-gold" : "text-navy"
+                        }`}
+                      >
+                        ${plan.price}
+                      </span>
+                      <span
+                        className={`text-sm ${
+                          plan.popular ? "text-ivory/60" : "text-navy/60"
+                        }`}
+                      >
+                        {plan.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  <Button
+                    className={`w-full mb-8 transition-all duration-300 ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-gold to-gold/90 hover:from-gold/90 hover:to-gold text-navy font-semibold shadow-lg hover:shadow-xl hover:shadow-gold/30"
+                        : "bg-navy hover:bg-navy/90 text-ivory"
+                    }`}
+                  >
+                    Get Started
+                  </Button>
+
+                  <div className="space-y-4">
+                    {plan.features.map((feature, featureIndex) => (
+                      <motion.div
+                        key={featureIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={isInView ? { opacity: 1, x: 0 } : {}}
+                        transition={{
+                          delay: 0.4 + index * 0.15 + featureIndex * 0.05,
+                        }}
+                        className="flex items-start gap-3"
+                      >
+                        <div
+                          className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
+                            plan.popular
+                              ? "bg-gold/20 border border-gold/50"
+                              : "bg-gold/10 border border-gold/30"
+                          }`}
+                        >
+                          <Check
+                            className={`w-3 h-3 ${
+                              plan.popular ? "text-gold" : "text-gold"
+                            }`}
+                          />
+                        </div>
+                        <span
+                          className={`text-sm leading-relaxed ${
+                            plan.popular ? "text-ivory/90" : "text-navy/80"
+                          }`}
+                        >
+                          {feature}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
