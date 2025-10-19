@@ -9,20 +9,23 @@ const steps = [
   {
     number: "01",
     icon: Ruler,
-    title: "Measurement",
-    description: "Our experts take precise measurements using time-honored techniques. Every detail matters for the perfect fit.",
+    title: "Private Consultation",
+    description:
+      "A sartorial advisor maps your lifestyle, calendar, and measurements—virtually or within our flagship suites.",
   },
   {
     number: "02",
     icon: Scissors,
-    title: "Crafting",
-    description: "Master artisans handcraft your garment over 72+ hours, ensuring every stitch reflects our heritage standards.",
+    title: "Crafting Ritual",
+    description:
+      "Master artisans spend 72+ hours hand-stitching, embroidering, and finishing each garment within heritage ateliers.",
   },
   {
     number: "03",
     icon: Truck,
-    title: "Delivery",
-    description: "Your bespoke piece arrives in premium packaging, ready to wear with pride. Alterations included.",
+    title: "White-Glove Delivery",
+    description:
+      "From final fitting to global delivery, we include lifetime alterations and seasonal garment refresh services.",
   },
 ];
 
@@ -83,13 +86,13 @@ export function HowItWorks() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block mb-4 px-4 py-1.5 bg-gradient-to-r from-navy/10 to-gold/10 rounded-full border border-navy/20"
           >
-            <span className="text-sm font-medium text-navy">The Process</span>
+            <span className="text-sm font-medium text-navy">Tailoring Ritual</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-serif font-semibold text-navy mb-6">
             How It Works
           </h2>
           <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto">
-            Three simple steps to your perfectly tailored garment
+            An intimate journey from first sketch to final steaming, orchestrated entirely around you.
           </p>
         </motion.div>
 

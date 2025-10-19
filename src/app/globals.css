@@ -123,18 +123,225 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-serif);
     font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.2;
   }
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+/* Premium animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(30px);
+  }
+}
+
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(196, 165, 82, 0.1) 50%,
+      transparent 100%);
+  background-size: 1000px 100%;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 4s ease-in-out infinite;
+}
+
+.animate-gradient {
+  animation: gradient-shift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Luxury gradients */
+.gradient-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #D4B563 50%, var(--color-gold) 100%);
+}
+
+.gradient-navy {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #1A2838 50%, var(--color-navy) 100%);
+}
+
+.gradient-shimmer {
+  background: linear-gradient(120deg,
+      transparent 0%,
+      transparent 40%,
+      rgba(196, 165, 82, 0.3) 50%,
+      transparent 60%,
+      transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Glass morphism effect */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-morphism-dark {
+  background: rgba(14, 26, 43, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(196, 165, 82, 0.2);
+}
+
+/* Premium shadow utilities */
+.shadow-luxury {
+  box-shadow:
+    0 10px 40px -10px rgba(196, 165, 82, 0.15),
+    0 0 0 1px rgba(196, 165, 82, 0.05);
+}
+
+.shadow-luxury-lg {
+  box-shadow:
+    0 20px 60px -15px rgba(196, 165, 82, 0.25),
+    0 0 0 1px rgba(196, 165, 82, 0.08);
+}
+
+.shadow-navy {
+  box-shadow:
+    0 10px 40px -10px rgba(14, 26, 43, 0.3),
+    0 0 0 1px rgba(14, 26, 43, 0.1);
+}
+
+/* Text gradient effects */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #D4B563 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-luxury {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #E8D499 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Premium hover effects */
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+/* Border gradient animation */
+.border-gradient-animated {
+  position: relative;
+  background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
+    linear-gradient(135deg, var(--color-gold), #D4B563, var(--color-gold)) border-box;
+  border: 2px solid transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Smooth transitions */
+.transition-luxury {
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Hide Next.js error overlay portal */

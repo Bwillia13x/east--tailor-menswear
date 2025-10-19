@@ -72,7 +72,11 @@ export function TextRevealSection() {
       </div>
       
       <div className="relative z-10">
-        <TextReveal>Where centuries of Eastern craftsmanship meet modern sophistication. Each stitch carries tradition. Each fabric tells a story. Each garment honors heritage while embracing tomorrow.</TextReveal>
+        <TextReveal>
+          Where Eastern court craftsmanship collides with modern architecture. Each stitch is
+          mapped with intention, each fabric sourced for legacy, each garment composed to move
+          effortlessly through gala evenings and decisive mornings.
+        </TextReveal>
       </div>
     </section>
   );

@@ -32,7 +32,7 @@ const Footer2 = ({
     title: "East & Tailor",
     url: "/",
   },
-  tagline = "Modern menswear with Eastern heritage.",
+  tagline = "Eastern heritage tailored into contemporary icon wardrobes.",
   menuItems = [
     {
       title: "Shop",

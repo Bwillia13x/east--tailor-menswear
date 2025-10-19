@@ -1,7 +1,7 @@
 'use client';
+import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { useMotionValue, animate, motion } from 'motion/react';
-import { useState, useEffect } from 'react';
 import useMeasure from 'react-use-measure';
 
 export type InfiniteSliderProps = {
@@ -90,6 +90,22 @@ export function InfiniteSlider({
       }
     : {};
 
+  const items = React.Children.toArray(children);
+  const duplicatedItems = items.map((child, index) => {
+    if (React.isValidElement(child)) {
+      const baseKey = child.key != null ? child.key.toString() : `item-${index}`;
+      return React.cloneElement(child, {
+        key: `${baseKey}-duplicate`,
+      });
+    }
+
+    return (
+      <span key={`item-${index}-duplicate`}>
+        {child}
+      </span>
+    );
+  });
+
   return (
     <div className={cn('overflow-hidden', className)}>
       <motion.div
@@ -104,8 +120,8 @@ export function InfiniteSlider({
         ref={ref}
         {...hoverProps}
       >
-        {children}
-        {children}
+        {items}
+        {duplicatedItems}
       </motion.div>
     </div>
   );

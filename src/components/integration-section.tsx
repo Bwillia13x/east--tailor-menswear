@@ -21,27 +21,35 @@ export default function IntegrationsSection() {
 
   const contactMethods = [
     {
-      title: "Email",
-      description: "Reach out to us directly for inquiries and collaborations",
-      action: "Send Email",
+      title: "Concierge",
+      description: "24-hour sartorial assistance for wardrobe planning and rush alterations",
+      action: "concierge@easttailor.com",
+      cta: "Email Concierge",
+      detail: "Replies within two hours worldwide",
       icon: Mail,
     },
     {
-      title: "Phone",
-      description: "Call us for immediate assistance or to schedule a consultation",
-      action: "Call Now",
+      title: "Private Consultations",
+      description: "Book an atelier or virtual fitting with a master tailor",
+      action: "+65 8900 1245",
+      cta: "Arrange Fitting",
+      detail: "Singapore • London • Dubai",
       icon: Phone,
     },
     {
-      title: "Instagram",
-      description: "Follow us for behind-the-scenes content and inspiration",
-      action: "Follow Us",
+      title: "House Style Journal",
+      description: "Behind-the-scenes craftsmanship, travel trunk shows, and client stories",
+      action: "@easttailor",
+      cta: "Follow Updates",
+      detail: "Instagram & Threads",
       icon: Instagram,
     },
     {
-      title: "Location",
-      description: "Visit our workshop in the heart of the city",
-      action: "Visit Us",
+      title: "Flagship Atelier",
+      description: "Experience fittings at The Fullerton Heritage precinct with ceremonial suites",
+      action: "9 Upper Collyer Quay, Singapore",
+      cta: "Plan Your Visit",
+      detail: "By appointment only",
       icon: MapPin,
     },
   ];
@@ -91,13 +99,13 @@ export default function IntegrationsSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-block mb-4 px-4 py-1.5 bg-gradient-to-r from-navy/10 to-gold/10 rounded-full border border-navy/20"
           >
-            <span className="text-sm font-medium text-navy">Get In Touch</span>
+            <span className="text-sm font-medium text-navy">Private Service</span>
           </motion.div>
           <h2 className="text-4xl md:text-6xl font-serif font-semibold text-navy mb-6">
-            Connect With Us
+            Concierge & Showrooms
           </h2>
           <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto">
-            Experience personalized service and craftsmanship excellence
+            Access round-the-clock support, private fittings, and invitations to travelling trunk shows.
           </p>
         </motion.div>
 
@@ -140,13 +148,17 @@ export default function IntegrationsSection() {
                 <p className="text-sm text-navy/70 mb-4 leading-relaxed">
                   {method.description}
                 </p>
+                <div className="mb-4 text-sm font-semibold text-navy">
+                  {method.action}
+                  <p className="text-xs font-normal text-navy/50">{method.detail}</p>
+                </div>
 
                 <Button
                   variant="outline"
                   size="sm"
                   className="w-full border-gold/30 text-navy hover:bg-gold hover:text-navy hover:border-gold transition-all duration-300 group-hover:shadow-md"
                 >
-                  {method.action}
+                  {method.cta}
                 </Button>
               </div>
             </motion.div>
@@ -174,13 +186,13 @@ export default function IntegrationsSection() {
             />
             <div className="relative px-8 py-6 bg-white/90 backdrop-blur-sm rounded-2xl border border-gold/30 shadow-lg">
               <p className="text-lg text-navy/80 mb-4">
-                Ready to experience our heritage craftsmanship?
+                Ready for a tailored wardrobe preview curated for your calendar?
               </p>
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-navy to-navy/90 hover:from-navy/90 hover:to-navy text-ivory shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Schedule Your Consultation
+                Request a Capsule Presentation
               </Button>
             </div>
           </div>

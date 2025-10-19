@@ -11,45 +11,47 @@ export default function PricingSection() {
 
   const plans = [
     {
-      name: "Curated Ready-to-Wear",
-      description: "Editioned garments cut in-house with complimentary tailoring and atelier finishing",
+      name: "Ready-to-Wear",
+      description: "Premium Eastern fabrics with standard size alterations and heritage craftsmanship",
       price: 299,
       period: "per piece",
       popular: false,
       features: [
-        "Quarterly capsule drops",
-        "Complimentary sleeve & hem tailoring",
-        "48-hour atelier dispatch",
-        "Ethically sourced natural fibres",
+        "Premium Eastern Fabrics",
+        "Standard Size Alterations",
+        "Heritage Craftsmanship",
+        "Quality Guarantee",
       ],
     },
     {
       name: "Semi-Bespoke",
-      description: "Hybrid service with personal stylists, fabric library access, and precision pattern work",
+      description: "Everything in Ready-to-Wear with personal consultation, custom fabric selection, and precision measurements",
       price: 799,
       period: "per piece",
       popular: true,
       features: [
-        "Dedicated sartorial concierge",
-        "Fabric library of 400+ mills",
-        "Digital & in-person measurements",
-        "Two bespoke fittings + detailing",
-        "Signature monogramming",
-        "Six-month fit refinement",
+        "Everything in Ready-to-Wear",
+        "Personal Style Consultation",
+        "Custom Fabric Selection",
+        "Precision Measurements",
+        "Two Fitting Sessions",
+        "Monogramming Included",
+        "Care Instructions Guide",
+        "6-Month Fit Guarantee",
       ],
     },
     {
       name: "Full Bespoke",
-      description: "A master tailor designs your archive with unlimited fittings and exclusive textile commissions",
+      description: "Everything in Semi-Bespoke with master tailor assignment, unlimited fittings, and exclusive fabric access",
       price: 1499,
       period: "per piece",
       popular: false,
       features: [
-        "Master tailor & pattern archivist",
-        "Unlimited fittings worldwide",
-        "Private trunk shows & house calls",
-        "Access to couture-only textiles",
-        "Lifetime aftercare programme",
+        "Everything in Semi-Bespoke",
+        "Master Tailor Assignment",
+        "Unlimited Fitting Sessions",
+        "Exclusive Fabric Access",
+        "Lifetime Fit Guarantee",
       ],
     },
   ];
@@ -111,6 +113,21 @@ export default function PricingSection() {
             <span className="text-gradient-luxury">Your Needs</span>
           </h2>
           <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto font-light leading-relaxed">
+            Choose the perfect plan for your wardrobe journey
+          </p>
+        </motion.div>
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-gradient-to-r from-gold/20 to-navy/10 rounded-full border border-gold/30"
+          >
+            <Sparkles className="w-4 h-4 text-gold" />
+            <span className="text-sm font-medium text-navy">Premium Pricing</span>
+          </motion.div>
+          <h2 className="text-4xl md:text-6xl font-serif font-semibold text-navy mb-6">
+            Tailored to Your Needs
+          </h2>
+          <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto">
             Choose the perfect plan for your wardrobe journey
           </p>
         </motion.div>
@@ -244,15 +261,6 @@ export default function PricingSection() {
             </motion.div>
           ))}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center text-sm text-navy/60"
-        >
-          All consultations include global video fittings and white-glove delivery.
-        </motion.p>
       </div>
     </section>
   );
