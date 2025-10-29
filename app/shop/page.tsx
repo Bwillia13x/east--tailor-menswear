@@ -213,11 +213,10 @@ export default function ShopPage() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                    selectedCategory === category
+                  className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${selectedCategory === category
                       ? "bg-primary text-primary-foreground"
                       : "bg-secondary/50 text-muted-foreground hover:bg-secondary hover:text-foreground"
-                  }`}
+                    }`}
                 >
                   {category}
                 </button>
@@ -411,7 +410,7 @@ export default function ShopPage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="max-w-3xl mx-auto text-center space-y-8">
             <h2 className="font-serif text-4xl lg:text-6xl font-semibold text-balance">
-              Can't find exactly what you're looking for?
+              Can&apos;t find exactly what you&apos;re looking for?
             </h2>
             <p className="text-lg text-primary-foreground/80 leading-relaxed">
               Every piece in our collection can be fully customized to your specifications. Or, start from scratch with

@@ -33,7 +33,7 @@ export function StatsSection() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
@@ -106,7 +106,7 @@ export function StatsSection() {
                 whileHover={{ scale: 1.1, opacity: 0.8 }}
                 transition={{ duration: 0.3 }}
               />
-              
+
               <div className="relative p-6 rounded-xl border border-gold/20 bg-white/50 backdrop-blur-sm transition-all duration-500 hover:border-gold/40 hover:shadow-lg hover:shadow-gold/10">
                 <div className="text-4xl md:text-5xl font-serif font-bold text-navy mb-2">
                   {isInView && (

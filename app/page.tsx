@@ -54,7 +54,7 @@ export default function HomePage() {
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
                   Step into a world where every garment tells your story. Our master tailors blend time-honored
-                  techniques with contemporary elegance, creating suits that don't just fit your body—they embody your
+                  techniques with contemporary elegance, creating suits that don&apos;t just fit your body—they embody your
                   character, ambition, and refined taste.
                 </p>
               </div>
@@ -101,10 +101,10 @@ export default function HomePage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-sm uppercase tracking-wider text-accent font-medium mb-4">Our Services</p>
             <h2 className="font-serif text-4xl lg:text-5xl font-semibold mb-6 text-balance">
-              Masterfully crafted for life's defining moments
+              Masterfully crafted for life&apos;s defining moments
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Whether commanding the boardroom or celebrating life's milestones, our bespoke creations ensure you're
+              Whether commanding the boardroom or celebrating life&apos;s milestones, our bespoke creations ensure you&apos;re
               dressed with distinction and confidence.
             </p>
           </div>
@@ -318,7 +318,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-muted-foreground leading-relaxed italic">"{testimonial.quote}"</p>
+                  <p className="text-muted-foreground leading-relaxed italic">&ldquo;{testimonial.quote}&rdquo;</p>
                   <div className="pt-4 border-t border-border">
                     <p className="font-semibold">{testimonial.author}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
