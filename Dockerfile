@@ -80,5 +80,3 @@ RUN mv global-error.tsx /home/user/app/src/app/global-error.tsx
 # ───────────────────────────────────────────
 RUN rm src/app/layout.tsx
 RUN mv layout.tsx src/app/
-
-
