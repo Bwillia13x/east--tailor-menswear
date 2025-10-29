@@ -79,15 +79,15 @@ export function InfiniteSlider({
 
   const hoverProps = speedOnHover
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speedOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentSpeed(speed);
-        },
-      }
+      onHoverStart: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speedOnHover);
+      },
+      onHoverEnd: () => {
+        setIsTransitioning(true);
+        setCurrentSpeed(speed);
+      },
+    }
     : {};
 
   const items = React.Children.toArray(children);
@@ -107,7 +107,7 @@ export function InfiniteSlider({
   });
 
   return (
-    <div className={cn('overflow-hidden', className)}>
+    <div className={cn('overflow-hidden relative', className)}>
       <motion.div
         className='flex w-max'
         style={{

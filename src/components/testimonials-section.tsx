@@ -35,21 +35,21 @@ const testimonials = [
 ];
 
 const proofPoints = [
-  {
-    value: "82%",
-    label: "of clients refresh bi-annually",
-    detail: "Wardrobe capsules curated every season",
-  },
-  {
-    value: "36",
-    label: "countries served by our concierge",
-    detail: "Virtual fittings with localised logistics",
-  },
-  {
-    value: "24h",
-    label: "turnaround on priority alterations",
-    detail: "Master tailors on-call for ceremonial needs",
-  },
+    {
+        value: "82%",
+        label: "of clients refresh bi-annually",
+        detail: "Wardrobe capsules curated every season",
+    },
+    {
+        value: "36",
+        label: "countries served by our concierge",
+        detail: "Virtual fittings with localised logistics",
+    },
+    {
+        value: "24h",
+        label: "turnaround on priority alterations",
+        detail: "Master tailors on-call for ceremonial needs",
+    },
 ];
 
 export function TestimonialsSection() {
@@ -113,7 +113,7 @@ export function TestimonialsSection() {
                         <span className="text-gradient-luxury">Discerning Gentlemen</span>
                     </h2>
                     <p className="text-lg md:text-xl text-navy/70 max-w-2xl mx-auto font-light leading-relaxed">
-                        Hear from clients who've experienced the East & Tailor difference
+                        Hear from clients who&apos;ve experienced the East & Tailor difference
                     </p>
                 </motion.div>
 
@@ -176,7 +176,7 @@ export function TestimonialsSection() {
 
                                 {/* Content */}
                                 <p className="text-navy/80 leading-relaxed mb-6 font-light text-base">
-                                    "{testimonial.content}"
+                                    &ldquo;{testimonial.content}&rdquo;
                                 </p>
 
                                 {/* Author */}
@@ -186,6 +186,7 @@ export function TestimonialsSection() {
                                             src={testimonial.image}
                                             alt={testimonial.name}
                                             fill
+                                            sizes="56px"
                                             className="object-cover"
                                         />
                                     </div>

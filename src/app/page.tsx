@@ -8,7 +8,6 @@ import PricingSection from "@/components/pricing-section";
 import { StatsSection } from "@/components/stats-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
 import { TextRevealSection } from "@/components/text-reveal-section";
-import Image from "next/image";
 
 export default function Home() {
   return (

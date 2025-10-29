@@ -73,7 +73,7 @@ export default function HeroSection() {
 
               {/* Animated gradient orbs */}
               <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[var(--color-gold)]/10 rounded-full blur-3xl animate-glow" />
-              <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-[var(--color-gold)]/5 rounded-full blur-3xl animate-glow" style={{ animationDelay: '2s' }} />
+              <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-[var(--color-gold)]/5 rounded-full blur-3xl animate-glow animation-delay-2s" />
 
               {/* Subtle grid pattern */}
               <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(196,165,82,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(196,165,82,0.03)_1px,transparent_1px)] bg-[size:80px_80px]" />
@@ -91,14 +91,13 @@ export default function HeroSection() {
                 </div>
 
                 <div
-                  className="mt-2 max-w-3xl text-5xl font-semibold text-[var(--color-ivory)] tracking-tight leading-[1.05] md:text-7xl lg:mt-4 lg:text-8xl"
-                  style={{ fontFamily: 'var(--font-serif)' }}
+                  className="mt-2 max-w-3xl text-5xl font-bold text-white tracking-tight leading-[1.05] md:text-7xl lg:mt-4 lg:text-8xl font-serif drop-shadow-2xl"
                 >
                   <TextEffect
                     as="span"
                     preset="fade-in-blur"
                     speedSegment={0.3}
-                    className="inline"
+                    className="inline text-white"
                   >
                     Eastern heritage, tailored for
                   </TextEffect>
@@ -108,7 +107,7 @@ export default function HeroSection() {
                     preset="fade-in-blur"
                     speedSegment={0.3}
                     delay={0.05}
-                    className="text-gradient-luxury inline-block"
+                    className="text-gradient-luxury inline-block font-bold"
                   >
                     modern icons.
                   </TextEffect>
@@ -120,7 +119,7 @@ export default function HeroSection() {
                   speedSegment={0.3}
                   delay={0.5}
                   as="p"
-                  className="mt-8 max-w-2xl text-pretty text-[var(--color-ivory)]/80 text-xl leading-relaxed font-light"
+                  className="mt-8 max-w-2xl text-pretty text-white/90 text-xl leading-relaxed font-normal"
                 >
                   Bespoke wardrobes for modern tastemakers. Every silhouette is cut from
                   regenerative natural fibres, finished by master artisans, and styled to
@@ -148,10 +147,10 @@ export default function HeroSection() {
                     >
                       <div className="absolute -top-12 right-0 h-24 w-24 rounded-full bg-[var(--color-gold)]/10 blur-3xl transition-opacity duration-300 group-hover:opacity-80" />
                       <item.icon className="mb-3 h-6 w-6 text-[var(--color-gold)]" />
-                      <p className="text-sm font-semibold uppercase tracking-widest text-[var(--color-ivory)]/70">
+                      <p className="text-sm font-semibold uppercase tracking-widest text-white/80">
                         {item.title}
                       </p>
-                      <p className="mt-2 text-sm leading-relaxed text-[var(--color-ivory)]/80">
+                      <p className="mt-2 text-sm leading-relaxed text-white/85 font-medium">
                         {item.copy}
                       </p>
                     </div>
@@ -201,7 +200,7 @@ export default function HeroSection() {
                 </AnimatedGroup>
 
                 {/* Enhanced trust indicators */}
-                <div className="mt-16 flex flex-wrap items-center gap-8 text-[var(--color-ivory)]/70 text-sm animate-fade-in" style={{ animationDelay: '1s' }}>
+                <div className="mt-16 flex flex-wrap items-center gap-8 text-white/80 text-sm animate-fade-in animation-delay-1s">
                   <div className="flex items-center gap-3 group">
                     <div className="flex -space-x-1">
                       {[1, 2, 3, 4, 5].map((i) => (
@@ -210,8 +209,8 @@ export default function HeroSection() {
                         </svg>
                       ))}
                     </div>
-                    <span className="font-semibold text-[var(--color-ivory)]">4.9</span>
-                    <span>from 2,100+ reviews</span>
+                    <span className="font-semibold text-white">4.9</span>
+                    <span className="font-medium">from 2,100+ reviews</span>
                   </div>
                   <div className="h-5 w-px bg-[var(--color-ivory)]/20" />
                   <div className="flex items-center gap-2">
@@ -257,6 +256,7 @@ export default function HeroSection() {
                       alt="East & Tailor heritage collection showcase"
                       width="2700"
                       height="1440"
+                      priority
                     />
                   </div>
                   <div className="absolute bottom-6 left-6 flex w-[min(100%,18rem)] flex-col gap-4 rounded-2xl border border-[var(--color-gold)]/40 bg-[var(--color-navy)]/75 p-5 backdrop-blur-xl shadow-xl">
@@ -290,27 +290,17 @@ export default function HeroSection() {
           </div>
         </section>
 
-        <section className="bg-[var(--color-navy)] pb-16 pt-20 md:pb-32 md:pt-24 border-t border-[var(--color-gold)]/10">
+        {/* Press mentions section - more compact */}
+        <section className="bg-[var(--color-navy)] py-12 md:py-16 border-t border-[var(--color-gold)]/10">
           <div className="group relative m-auto max-w-5xl px-6">
-            <div className="absolute inset-0 z-10 flex scale-95 items-center justify-center opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-              <Link
-                href="/heritage"
-                className="flex items-center gap-2 px-8 py-4 rounded-full bg-[var(--color-gold)]/10 border border-[var(--color-gold)]/30 backdrop-blur-md text-sm duration-150 hover:bg-[var(--color-gold)]/20 text-[var(--color-ivory)] font-semibold shadow-luxury hover:shadow-luxury-lg transition-all"
-              >
-                <span className="tracking-wide">Crafted with tradition, worn with pride</span>
-                <ChevronRight className="size-5" />
-              </Link>
+            <div className="text-center mb-8">
+              <p className="text-gradient-gold text-xs font-semibold tracking-widest uppercase mb-2">As Featured In</p>
             </div>
 
-            <div className="text-center mb-12 transition-opacity duration-500 group-hover:opacity-0">
-              <p className="text-gradient-gold text-sm font-semibold tracking-widest uppercase mb-3">As Featured In</p>
-              <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-[var(--color-gold)]/40 to-transparent" />
-            </div>
-
-            <div className="transition-all duration-500 group-hover:blur-sm group-hover:opacity-30 mx-auto mt-12 grid max-w-3xl grid-cols-2 gap-x-10 gap-y-8 sm:grid-cols-4 sm:gap-x-16 sm:gap-y-10 items-center text-center">
+            <div className="mx-auto grid max-w-4xl grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-4 sm:gap-x-12 sm:gap-y-8 items-center text-center">
               {pressMentions.map((label) => (
                 <div key={label} className="flex items-center justify-center">
-                  <span className="text-sm font-semibold uppercase tracking-[0.4em] text-[var(--color-ivory)]/70 transition-all duration-300 hover:text-[var(--color-gold)]">
+                  <span className="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-ivory)]/60 transition-all duration-300 hover:text-[var(--color-gold)]">
                     {label}
                   </span>
                 </div>

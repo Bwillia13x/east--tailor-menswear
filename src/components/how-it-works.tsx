@@ -69,6 +69,7 @@ export function HowItWorks() {
           src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/0a6d0e65-00af-4c2d-b3da-a1ffa32c4565/generated_images/modern-fashion-lookbook-photograph-featu-f8b5519b-20251019183753.jpg?"
           alt="Background"
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>
@@ -137,7 +138,7 @@ export function HowItWorks() {
                     <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-white to-ivory rounded-2xl shadow-lg">
                       <step.icon className="w-10 h-10 text-navy" />
                     </div>
-                    
+
                     {/* Step number badge */}
                     <motion.div
                       className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-gold to-gold/80 rounded-full flex items-center justify-center shadow-lg border-2 border-white"

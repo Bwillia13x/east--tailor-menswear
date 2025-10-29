@@ -43,8 +43,7 @@ export const HeroHeader = () => {
               <Link
                 href="/"
                 aria-label="home"
-                className="flex items-center font-semibold gap-2 space-x-2 text-[var(--color-ivory)]"
-                style={{ fontFamily: 'var(--font-serif)' }}
+                className="flex items-center font-semibold gap-2 space-x-2 text-[var(--color-ivory)] font-serif"
               >
                 <Scissors className="text-[var(--color-gold)]" />
                 East & Tailor

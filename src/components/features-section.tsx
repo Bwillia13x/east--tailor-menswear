@@ -28,7 +28,7 @@ export default function FeaturesSection() {
         />
         {/* Floating orbs */}
         <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-gold)]/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[var(--color-navy)]/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-[var(--color-navy)]/5 rounded-full blur-3xl animate-float animation-delay-3s" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6">
@@ -50,7 +50,7 @@ export default function FeaturesSection() {
             <Award className="w-4 h-4 text-[var(--color-gold)] group-hover:rotate-12 transition-transform duration-300" />
             <span className="text-gradient-gold text-sm font-semibold tracking-wider">CRAFTSMANSHIP EXCELLENCE</span>
           </motion.div>
-          <h2 className="text-4xl md:text-6xl font-semibold text-[var(--color-navy)] mb-6 tracking-tight" style={{ fontFamily: 'var(--font-serif)' }}>
+          <h2 className="text-4xl md:text-6xl font-semibold text-[var(--color-navy)] mb-6 tracking-tight font-serif">
             The Art of{" "}
             <span className="text-gradient-luxury">Modern Tailoring</span>
           </h2>
@@ -100,7 +100,7 @@ export default function FeaturesSection() {
               >
                 <Leaf className="w-7 h-7 text-[var(--color-navy)]" />
               </motion.div>
-              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3 group-hover:text-gradient-gold transition-all duration-300" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3 group-hover:text-gradient-gold transition-all duration-300 font-serif">
                 Nature-luxe textiles
               </h3>
               <p className="text-[var(--color-navy)]/70 leading-relaxed mb-5 font-light">
@@ -156,7 +156,7 @@ export default function FeaturesSection() {
               >
                 <Award className="w-6 h-6 text-[var(--color-navy)]" />
               </motion.div>
-              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3 font-serif">
                 Heritage ateliers
               </h3>
               <p className="text-[var(--color-navy)]/70 leading-relaxed mb-4">
@@ -212,7 +212,7 @@ export default function FeaturesSection() {
               >
                 <Ruler className="w-6 h-6 text-[var(--color-navy)]" />
               </motion.div>
-              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3" style={{ fontFamily: 'var(--font-serif)' }}>
+              <h3 className="text-2xl font-semibold text-[var(--color-navy)] mb-3 font-serif">
                 Tailor-led precision
               </h3>
               <p className="text-[var(--color-navy)]/70 leading-relaxed mb-4">
