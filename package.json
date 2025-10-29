@@ -15,7 +15,7 @@
     "@radix-ui/react-dialog": "latest",
     "@radix-ui/react-slot": "latest",
     "@tabler/icons-react": "^3.35.0",
-    "@vercel/analytics": "latest",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cobe": "^0.6.5",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@babel/parser": "^7.28.4",
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
