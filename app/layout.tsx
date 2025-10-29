@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "East Tailor Menswear - Bespoke Tailoring & Custom Suits",
+  title: "East & Tailor - Bespoke Tailoring & Custom Suits",
   description:
     "Premium bespoke tailoring and custom menswear. Experience the art of perfect fit with our master craftsmen.",
   generator: "v0.app",

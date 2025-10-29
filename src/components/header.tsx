@@ -1,11 +1,11 @@
-"use client";
-import Link from "next/link";
-
-import { Menu, Scissors, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import React from "react";
-import { cn } from "@/lib/utils";
-import { useScroll } from "motion/react";
+"use client"
+import Link from "next/link"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import React from "react"
+import { cn } from "@/lib/utils"
+import { useScroll } from "motion/react"
 
 const menuItems = [
   { name: "Shop", href: "/shop" },
@@ -13,20 +13,20 @@ const menuItems = [
   { name: "Style Guide", href: "/style" },
   { name: "Heritage", href: "/heritage" },
   { name: "Contact", href: "/contact" },
-];
+]
 
 export const HeroHeader = () => {
-  const [menuState, setMenuState] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(false);
+  const [menuState, setMenuState] = React.useState(false)
+  const [scrolled, setScrolled] = React.useState(false)
 
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll()
 
   React.useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      setScrolled(latest > 0.05);
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+      setScrolled(latest > 0.05)
+    })
+    return () => unsubscribe()
+  }, [scrollYProgress])
 
   return (
     <header>
@@ -34,7 +34,7 @@ export const HeroHeader = () => {
         data-state={menuState && "active"}
         className={cn(
           "fixed z-50 w-full border-b transition-colors duration-150",
-          "bg-[var(--color-navy)]/95 backdrop-blur-xl border-[var(--color-gold)]/20"
+          "bg-[var(--color-navy)]/95 backdrop-blur-xl border-[var(--color-gold)]/20",
         )}
       >
         <div className="mx-auto max-w-5xl px-6 transition-all duration-300">
@@ -45,7 +45,13 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center font-semibold gap-2 space-x-2 text-[var(--color-ivory)] font-serif"
               >
-                <Scissors className="text-[var(--color-gold)]" />
+                <Image
+                  src="/logo.png"
+                  alt="East & Tailor Logo"
+                  width={32}
+                  height={32}
+                  className="text-[var(--color-gold)]"
+                />
                 East & Tailor
               </Link>
 
@@ -90,12 +96,21 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button asChild variant="outline" size="sm" className="border-[var(--color-gold)] text-[var(--color-gold)] hover:bg-[var(--color-gold)]/10">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="border-[var(--color-gold)] text-[var(--color-gold)] hover:bg-[var(--color-gold)]/10 bg-transparent"
+                >
                   <Link href="/custom">
                     <span>Book Fitting</span>
                   </Link>
                 </Button>
-                <Button asChild size="sm" className="bg-[var(--color-gold)] hover:bg-[var(--color-gold)]/90 text-[var(--color-navy)]">
+                <Button
+                  asChild
+                  size="sm"
+                  className="bg-[var(--color-gold)] hover:bg-[var(--color-gold)]/90 text-[var(--color-navy)]"
+                >
                   <Link href="/shop">
                     <span>Shop Now</span>
                   </Link>
@@ -106,5 +121,5 @@ export const HeroHeader = () => {
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}

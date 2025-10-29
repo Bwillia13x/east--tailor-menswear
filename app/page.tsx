@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, Menu } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function HomePage() {
   return (
@@ -10,8 +11,12 @@ export default function HomePage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            <Link href="/" className="font-serif text-2xl font-semibold tracking-tight text-foreground">
-              East Tailor
+            <Link
+              href="/"
+              className="font-serif text-2xl font-semibold tracking-tight text-foreground flex items-center gap-2"
+            >
+              <Image src="/logo.png" alt="East & Tailor Logo" width={40} height={40} className="rounded-full" />
+              East & Tailor
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
@@ -54,8 +59,8 @@ export default function HomePage() {
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
                   Step into a world where every garment tells your story. Our master tailors blend time-honored
-                  techniques with contemporary elegance, creating suits that don&apos;t just fit your body—they embody your
-                  character, ambition, and refined taste.
+                  techniques with contemporary elegance, creating suits that don&apos;t just fit your body—they embody
+                  your character, ambition, and refined taste.
                 </p>
               </div>
 
@@ -104,8 +109,8 @@ export default function HomePage() {
               Masterfully crafted for life&apos;s defining moments
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Whether commanding the boardroom or celebrating life&apos;s milestones, our bespoke creations ensure you&apos;re
-              dressed with distinction and confidence.
+              Whether commanding the boardroom or celebrating life&apos;s milestones, our bespoke creations ensure
+              you&apos;re dressed with distinction and confidence.
             </p>
           </div>
 
@@ -365,7 +370,7 @@ export default function HomePage() {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div className="space-y-4">
-              <h3 className="font-serif text-2xl font-semibold">East Tailor</h3>
+              <h3 className="font-serif text-2xl font-semibold">East & Tailor</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Crafting bespoke menswear with passion and precision since 1985.
               </p>
@@ -435,7 +440,7 @@ export default function HomePage() {
           </div>
 
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">© 2025 East Tailor Menswear. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© 2025 East & Tailor. All rights reserved.</p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <Link href="#" className="hover:text-foreground transition-colors">
                 Privacy Policy
